@@ -11,15 +11,18 @@ const { Person } = require('./model')
 const schema = require('./schema')
 const resolvers = require('./resolvers');
 
-mongoose.connect(
-  "mongodb://dost:test@ds157538.mlab.com:57538/graphqltest"
-, (err) => {
-  if(err) {
-    return console.log(err)
-  }
+mongoose.connect('mongodb://pixelspy:soleilmahana10@ds157528.mlab.com:57528/herokutest');
 
-  console.log('mongoose OK');
-});
+
+//   ,
+//    (err) => {
+//   if(err) {
+//     return console.log(err)
+//   }
+//
+//   console.log('mongoose OK');
+// }
+// );
 
 const execSchema = makeExecutableSchema({
   typeDefs: schema,
